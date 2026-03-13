@@ -11,5 +11,6 @@ int main(int argc, char *argv[])
 {
     std::thread t(hello);
     t.join();
-    std::cout << "git正常工作" << std::endl;
+    std::cout << "git正常工作1" << std::endl;
+    std::cout << "git正常工作2" << std::endl;
 }

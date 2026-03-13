@@ -1,0 +1,120 @@
+174876 socket(AF_INET6, SOCK_DGRAM, IPPROTO_IP) = 5
+174877 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 7
+174877 connect(7, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+174877 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 7
+174877 connect(7, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+174877 socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC, NETLINK_ROUTE) = 7
+174877 bind(7, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 0
+174877 getsockname(7, {sa_family=AF_NETLINK, nl_pid=174876, nl_groups=00000000}, [12]) = 0
+174877 sendto(7, [{nlmsg_len=20, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1773379926, nlmsg_pid=0}, {ifa_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+174877 recvmsg(7, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1773379926, nlmsg_pid=174876}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=57, tstamp=57}]]], [{nlmsg_len=84, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1773379926, nlmsg_pid=174876}, {ifa_family=AF_INET, ifa_prefixlen=32, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("10.255.255.254")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("10.255.255.254")], [{nla_len=8, nla_type=IFA_BROADCAST}, inet_addr("10.255.255.254")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=58, tstamp=58}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1773379926, nlmsg_pid=174876}, {ifa_family=AF_INET, ifa_prefixlen=20, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("eth0")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("172.30.179.60")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("172.30.179.60")], [{nla_len=8, nla_type=IFA_BROADCAST}, inet_addr("172.30.191.255")], [{nla_len=9, nla_type=IFA_LABEL}, "eth0"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=77, tstamp=77}]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 248
+174877 recvmsg(7, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=80, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1773379926, nlmsg_pid=174876}, {ifa_family=AF_INET6, ifa_prefixlen=128, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "::1")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=57, tstamp=57}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=5, nla_type=IFA_PROTO}, "\x01"]]], [{nlmsg_len=80, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1773379926, nlmsg_pid=174876}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("eth0")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "fe80::215:5dff:fe91:495b")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=78, tstamp=78}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=5, nla_type=IFA_PROTO}, "\x03"]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 160
+174877 recvmsg(7, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1773379926, nlmsg_pid=174876}, 0], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+174877 socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 7
+174877 connect(7, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("140.82.112.3")}, 16) = 0
+174877 getsockname(7, {sa_family=AF_INET, sin_port=htons(49184), sin_addr=inet_addr("172.30.179.60")}, [28 => 16]) = 0
+174877 connect(7, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+174877 connect(7, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("20.205.243.166")}, 16) = 0
+174877 getsockname(7, {sa_family=AF_INET, sin_port=htons(60599), sin_addr=inet_addr("172.30.179.60")}, [28 => 16]) = 0
+174877 +++ exited with 0 +++
+174876 socket(AF_INET, SOCK_STREAM, IPPROTO_TCP) = 5
+174876 setsockopt(5, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+174876 setsockopt(5, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+174876 setsockopt(5, SOL_TCP, TCP_KEEPIDLE, [60], 4) = 0
+174876 setsockopt(5, SOL_TCP, TCP_KEEPINTVL, [60], 4) = 0
+174876 connect(5, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("140.82.112.3")}, 16) = -1 EINPROGRESS (Operation now in progress)
+174876 getsockname(5, {sa_family=AF_INET, sin_port=htons(56508), sin_addr=inet_addr("172.30.179.60")}, [128 => 16]) = 0
+174876 getsockopt(5, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+174876 getsockname(5, {sa_family=AF_INET, sin_port=htons(56508), sin_addr=inet_addr("172.30.179.60")}, [128 => 16]) = 0
+174876 getpeername(5, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("140.82.112.3")}, [128 => 16]) = 0
+174876 getsockname(5, {sa_family=AF_INET, sin_port=htons(56508), sin_addr=inet_addr("172.30.179.60")}, [128 => 16]) = 0
+174876 sendto(5, "\26\3\3\1\206\1\0\1\202\3\3RC\31\37\276\255\272\231\367\364\302\320\202n\2617{\7Hr&"..., 395, MSG_NOSIGNAL, NULL, 0) = 395
+174876 recvfrom(5, 0x62303c5eb87b, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 recvfrom(5, "\26\3\3\0\233", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\2\0\0\227\3\3\263m\252\340\203\34\"\234p\221\2665\240\360\32\3253[g\375\30R\22\351\265j"..., 155, 0, NULL, NULL) = 155
+174876 sendto(5, "\24\3\3\0\1\1", 6, MSG_NOSIGNAL, NULL, 0) = 6
+174876 recvfrom(5, "\24\3\3\0\1", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\1", 1, 0, NULL, NULL) = 1
+174876 recvfrom(5, "\27\3\3\0.", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\240\2227\371\361\25\251\33\344S:.$\271\32h\\Q\375%\2348\273&\366\364 \203_ZJ\336"..., 46, 0, NULL, NULL) = 46
+174876 recvfrom(5, "\27\3\3\n\304", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\r\1\333\376\314\252\5>\256\343\355y\1776\366\337\311P\327\246-\363\23\315\331\276\37p\360g\334\361"..., 2756, 0, NULL, NULL) = 2756
+174876 recvfrom(5, "\27\3\3\0a", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\5+\201\312\\w\230\222\221,>\5\375\206\4\321E\3\34^\370^\22\277\226\255!\r\253v\v\25"..., 97, 0, NULL, NULL) = 97
+174876 recvfrom(5, "\27\3\3\0005", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\226\232\220\341\343\177\235\307\5\t\364\310\341\267|\222Yz\r\226vj#\260:\304[\255\\{\271\215"..., 53, 0, NULL, NULL) = 53
+174876 sendto(5, "\27\3\3\0005Y\272`\354M3\207\327L\230k\330-U\354\212#7\236[\375A\247%\227\372\n"..., 58, MSG_NOSIGNAL, NULL, 0) = 58
+174876 recvfrom(5, 0x62303c5cfcf3, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 sendto(5, "\27\3\3\0QQm\1\350\210\272{,M \232\t\304\321\35\313\240n\323]W[\374\304\374\331t"..., 86, MSG_NOSIGNAL, NULL, 0) = 86
+174876 getpeername(5, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("140.82.112.3")}, [128 => 16]) = 0
+174876 getsockname(5, {sa_family=AF_INET, sin_port=htons(56508), sin_addr=inet_addr("172.30.179.60")}, [128 => 16]) = 0
+174876 getpeername(5, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("140.82.112.3")}, [128 => 16]) = 0
+174876 getsockname(5, {sa_family=AF_INET, sin_port=htons(56508), sin_addr=inet_addr("172.30.179.60")}, [128 => 16]) = 0
+174876 sendto(5, "\27\3\3\0\212g\24e&w\7(D\273\200\306\351\266\243[\273\253*\22\10<\346`JO\350\217"..., 143, MSG_NOSIGNAL, NULL, 0) = 143
+174876 recvfrom(5, "\27\3\3\0J", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\262#\343\343}p\214\02045TQp\315\332F\214wH\266\275a\373\23\216=\374\353\275<\244\362"..., 74, 0, NULL, NULL) = 74
+174876 recvfrom(5, "\27\3\3\0J", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "a\306\6\236\207A}\6\4\252\27\246\214\3415CF\342h\322\356@\32\223<J\255Kds\254*"..., 74, 0, NULL, NULL) = 74
+174876 recvfrom(5, "\27\3\3\0;", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "z\324w\32\20\230w)>\220\5\343\251\237\26\342\321\3714\2458$\331\271\314\1c\273\337\321\251\323"..., 59, 0, NULL, NULL) = 59
+174876 recvfrom(5, 0x62303c5cfcf3, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 sendto(5, "\27\3\3\0\32\223u\3735$\3\304\303\274\357\6\20YQdJ\r\232\213\35-8Y\r\310e", 31, MSG_NOSIGNAL, NULL, 0) = 31
+174876 recvfrom(5, "\27\3\3\1X", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\303\325\202\305`\203sjq\356Td\210dVG\307\24\225\6-\350\261\364\315b\312\246\275\341\304 "..., 344, 0, NULL, NULL) = 344
+174876 sendto(5, "\27\3\3\0\213\17\2769\217s\315\306J,\330[\270\3063=N*\221\301X\35\260%*\212\304\376"..., 144, MSG_NOSIGNAL, NULL, 0) = 144
+174876 recvfrom(5, 0x62303c5cfcf3, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 recvfrom(5, "\27\3\3\1\221", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "z\366\246\277\337\347\22\223\334\355\371\304\263\230\246\\\220\214\334\263K+i\n\363\207\230qfZ\2059"..., 401, 0, NULL, NULL) = 401
+174876 recvfrom(5, "\27\3\3\0=", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\206 :\229\263\215_z#\3550V?\267\2121\344\275\23\341\254\356\227,\25\"\271\237\202\25z"..., 61, 0, NULL, NULL) = 61
+174876 recvfrom(5, 0x62303c5cfcf3, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 recvfrom(5, 0x62303c5cfcf3, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 recvfrom(5, "\27\3\3\1\201", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "w&\20V\342\235\270\272e\235\344\243\33\347\360\230\246+\1\307\244y6\331H1j\264\202C\270\201"..., 385, 0, NULL, NULL) = 385
+174876 recvfrom(5, "\27\3\3\0\32", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\fr\243\376\34\10W\301\337#\332\\\1\25T\305\26\222\300\364\31\355\242B\272T", 26, 0, NULL, NULL) = 26
+174898 +++ exited with 0 +++
+174897 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=174898, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+174897 +++ exited with 0 +++
+174876 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=174897, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+174902 +++ exited with 0 +++
+174901 +++ exited with 0 +++
+174899 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=174901, si_uid=1000, si_status=0, si_utime=0, si_stime=3 /* 0.03 s */} ---
+174876 sendto(5, "\27\3\3\23\2S\244\367\334\233\267\2537\\\336\"\237$0.y\3\327\212k\37T\204\334{\257\205"..., 4871, MSG_NOSIGNAL, NULL, 0) = 4871
+174876 recvfrom(5, "\27\3\3\0+", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\320`\234Cc\322\206q{\243\233\374\364\257\245\363\332\1\364\251\227Y\321{\245k\340\0213\361\277\360"..., 43, 0, NULL, NULL) = 43
+174876 recvfrom(5, 0x62303c5cfcf3, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 recvfrom(5, "\27\3\3\1\212", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\263]K\362A\343\272\36\26l\374\34\4%\251\244\26\265\22\341\312\366\300w|\200\323\225O\326\2\240"..., 394, 0, NULL, NULL) = 394
+174876 recvfrom(5, 0x62303c5cfcf3, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 recvfrom(5, 0x62303c5cfcf3, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 recvfrom(5, "\27\3\3\0 ", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\313O\223\327\205\355\230\373\307\273j)\31\237\3\33\21\243\300z\254^\22fI\310\355z\307-\252W", 32, 0, NULL, NULL) = 32
+174876 recvfrom(5, "\27\3\3\0<", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\2507\32\253O[\305\330<g\304\357\24k\212jB\30\27,\327\333\256Srr\276\20*\362=)"..., 60, 0, NULL, NULL) = 60
+174876 recvfrom(5, "\27\3\3\0<", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "<L\214g2\305\373\274\371\2061&\23\25\275N\"\2105\334\306\330\266B\301\250\364\226\33\27]\363"..., 60, 0, NULL, NULL) = 60
+174876 recvfrom(5, "\27\3\3\0<", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "n\244o\334\17\265tU]\235Ic:\31\0047t\352\377xv\355\252\354\373v}\263)\"K\233"..., 60, 0, NULL, NULL) = 60
+174876 recvfrom(5, 0x62303c5cfcf3, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 recvfrom(5, 0x62303c5cfcf3, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 recvfrom(5, "\27\3\3\0<", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\345\356\370D\3^\351$\24\364\375V\372\37\265}\313\277\333\236\315\270\337\355\"x\344\374p{Z\347"..., 60, 0, NULL, NULL) = 60
+174876 recvfrom(5, "\27\3\3\0]", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\370\222p4\202)qO\326\237\311\233J\362\311\6_\341\267\2277\215\237,\27\\e\36sT?)"..., 93, 0, NULL, NULL) = 93
+174876 recvfrom(5, 0x62303c5cfcf3, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 recvfrom(5, 0x62303c5cfcf3, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 recvfrom(5, "\27\3\3\0X", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "n,\336t\317W\354c^\324\27\351l\4\251\233\315\177oo\306S\370\2461C\240}\211\34.s"..., 88, 0, NULL, NULL) = 88
+174876 recvfrom(5, "\27\3\3\0\32", 5, 0, NULL, NULL) = 5
+174876 recvfrom(5, "\r\34^\0\32\356v\377\301,\204K\362O\3043>~!\314\241m\276/\273F", 26, 0, NULL, NULL) = 26
+174900 +++ exited with 0 +++
+174899 +++ exited with 0 +++
+174876 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=174899, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+174876 recvfrom(5, 0x62303c5cfcf3, 5, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+174876 sendto(5, "\27\3\3\0\0231K\347\214\224\256\221\360^\177\277\7\255\324l\370\3315C", 24, MSG_NOSIGNAL, NULL, 0) = 24
+174876 +++ exited with 0 +++
+174875 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=174876, si_uid=1000, si_status=0, si_utime=4 /* 0.04 s */, si_stime=4 /* 0.04 s */} ---
+174875 +++ exited with 0 +++
+174874 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=174875, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+174874 +++ exited with 0 +++
