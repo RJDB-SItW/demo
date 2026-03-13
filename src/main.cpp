@@ -11,4 +11,5 @@ int main(int argc, char *argv[])
 {
     std::thread t(hello);
     t.join();
+    std::cout << "git正常工作" << std::endl;
 }
